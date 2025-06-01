@@ -1,0 +1,140 @@
+Ton application de suivi de projet servira à planifier, organiser et suivre l’évolution d’un ou plusieurs projets
+
+Objectif :
+Permettre aux utilisateurs de créer et gérer plusieurs projets.
+
+Fonctionnalités :
+Créer un projet : nom, description, dates de début et de fin.
+
+Modifier un projet : éditer les informations du projet.
+
+Supprimer un projet
+
+Lister tous les projets (dashboard ou vue tableau).
+
+Affecter des utilisateurs à un projet.
+
+
+2. ✅ Gestion des Tâches
+Objectif :
+Permettre de gérer des tâches dans chaque projet.
+
+Fonctionnalités :
+Créer une tâche :
+
+Titre, description
+
+Dates début/fin
+
+Statut (À faire, En cours, Terminé)
+
+Priorité (basse, moyenne, haute)
+
+Assignation à un membre
+
+Modifier/Supprimer une tâche
+
+Drag & drop pour changer de statut dans un tableau Kanban
+
+Filtres (par statut, utilisateur, projet)
+
+Commentaires (optionnel)
+
+
+
+3. 📅 Vue Planning / Timeline
+Objectif :
+Visualiser les tâches et leur avancement sur une période donnée.
+
+Fonctionnalités :
+Vue calendrier ou Gantt
+
+Vue Kanban (colonnes par statut)
+
+Vue semaine, mois
+
+Zoom/dézoom sur les dates
+
+Filtrage par projet ou utilisateur
+
+
+4. 👤 Gestion des Utilisateurs
+Objectif :
+Attribuer les tâches à des utilisateurs et suivre leur activité.
+
+Fonctionnalités :
+Créer des utilisateurs
+
+Se connecter (auth) (optionnel)
+
+Voir toutes les tâches assignées
+
+Voir les statistiques personnelles
+
+Gérer son profil (email, mot de passe, avatar)
+
+5. 📊 Statistiques & Suivi d’Avancement
+Objectif :
+Donner une vue synthétique du travail accompli et en cours.
+
+Fonctionnalités :
+% d’avancement global d’un projet (tâches terminées vs totales)
+
+Graphique circulaire ou barres
+
+Alertes de retard (tâches non terminées à la date prévue)
+
+Nombre de tâches :
+
+Par statut
+
+Par utilisateur
+
+Par projet
+
+
+6. 🔍 Recherche et filtres
+Objectif :
+Accéder rapidement à une tâche ou un projet.
+
+Fonctionnalités :
+Barre de recherche globale
+
+Filtres combinés :
+
+Par date
+
+Par utilisateur
+
+Par priorité
+
+Par projet
+
+
+7. 📁 Export & Historique (optionnel)
+Objectif :
+Exporter les données ou consulter les changements.
+
+Fonctionnalités :
+Export PDF ou CSV des projets et tâches
+
+Historique des actions :
+
+Tâche créée, modifiée, déplacée
+
+Membre ajouté, projet supprimé, etc.
+
+8. 🔐 Authentification et rôles (optionnel mais recommandé)
+Objectif :
+Gérer différents niveaux d’accès.
+
+Fonctionnalités :
+Connexion / inscription
+
+Rôles :
+
+Admin : accès à tout
+
+Chef de projet : gestion des projets et membres
+
+Collaborateur : accès limité à ses projets/tâches

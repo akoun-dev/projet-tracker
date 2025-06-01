@@ -1,0 +1,1668 @@
+[
+    {
+        "id": 1,
+        "name": "Refonte Site Corporate",
+        "description": "Mise à jour complète du site corporate.",
+        "start_date": "2025-06-01",
+        "end_date": "2025-08-01",
+        "status": "In Progress",
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Analyse des besoins",
+                    "start_date": "2025-06-01",
+                    "end_date": "2025-06-01",
+                    "status": "Completed",
+                    "description": "Recueil des besoins auprès des utilisateurs.",
+                    "id": 1
+                },
+                {
+                    "name": "Atelier design",
+                    "start_date": "2025-06-01",
+                    "end_date": "2025-06-01",
+                    "status": "In Progress",
+                    "description": "Atelier de co-création avec l’équipe.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Définition arborescence",
+                    "start_date": "2025-06-10",
+                    "end_date": "2025-06-10",
+                    "status": "Completed",
+                    "description": "Organisation des pages du site.",
+                    "id": 3
+                },
+                {
+                    "name": "Rédaction cahier des charges",
+                    "start_date": "2025-06-10",
+                    "end_date": "2025-06-10",
+                    "status": "In Progress",
+                    "description": "Spécifications fonctionnelles.",
+                    "id": 4
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement Frontend",
+                    "start_date": "2025-06-15",
+                    "end_date": "2025-06-15",
+                    "status": "Planned",
+                    "description": "Développement des pages principales.",
+                    "id": 11
+                },
+                {
+                    "name": "Intégration CMS",
+                    "start_date": "2025-06-16",
+                    "end_date": "2025-06-16",
+                    "status": "Planned",
+                    "description": "Connexion au CMS.",
+                    "id": 12
+                },
+                {
+                    "name": "Développement composants",
+                    "start_date": "2025-06-17",
+                    "end_date": "2025-06-17",
+                    "status": "Planned",
+                    "description": "Création des composants réutilisables.",
+                    "id": 13
+                },
+                {
+                    "name": "Tests unitaires",
+                    "start_date": "2025-06-18",
+                    "end_date": "2025-06-18",
+                    "status": "Planned",
+                    "description": "Écriture des tests unitaires.",
+                    "id": 14
+                },
+                {
+                    "name": "Accessibilité",
+                    "start_date": "2025-06-19",
+                    "end_date": "2025-06-19",
+                    "status": "Planned",
+                    "description": "Vérification de l’accessibilité.",
+                    "id": 15
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette fonctionnelle",
+                    "start_date": "2025-06-22",
+                    "end_date": "2025-06-22",
+                    "status": "Planned",
+                    "description": "Tests fonctionnels.",
+                    "id": 16
+                },
+                {
+                    "name": "Correction bugs",
+                    "start_date": "2025-06-23",
+                    "end_date": "2025-06-23",
+                    "status": "Planned",
+                    "description": "Correction des anomalies détectées.",
+                    "id": 17
+                },
+                {
+                    "name": "Optimisation SEO",
+                    "start_date": "2025-06-24",
+                    "end_date": "2025-06-24",
+                    "status": "Planned",
+                    "description": "Optimisation du référencement.",
+                    "id": 18
+                },
+                {
+                    "name": "Déploiement production",
+                    "start_date": "2025-06-25",
+                    "end_date": "2025-06-25",
+                    "status": "Planned",
+                    "description": "Mise en ligne du site.",
+                    "id": 19
+                },
+                {
+                    "name": "Formation client",
+                    "start_date": "2025-06-26",
+                    "end_date": "2025-06-26",
+                    "status": "Planned",
+                    "description": "Formation à l’utilisation du CMS.",
+                    "id": 20
+                }
+            ]
+        }
+    },
+    {
+        "name": "Migration ERP vers Cloud",
+        "description": "Migration du système ERP interne vers une solution cloud sécurisée.",
+        "start_date": "2025-07-01",
+        "end_date": "2025-09-01",
+        "status": "Planning",
+        "id": 2,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Audit de l’existant",
+                    "start_date": "2025-07-01",
+                    "end_date": "2025-07-07",
+                    "status": "Completed",
+                    "description": "Analyse des processus et inventaire des données.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Planification migration",
+                    "start_date": "2025-07-08",
+                    "end_date": "2025-07-14",
+                    "status": "In Progress",
+                    "description": "Définition du plan de migration et des jalons.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Préparation des environnements",
+                    "start_date": "2025-07-15",
+                    "end_date": "2025-07-21",
+                    "status": "Planned",
+                    "description": "Mise en place des environnements cloud.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Migration des données",
+                    "start_date": "2025-07-22",
+                    "end_date": "2025-07-28",
+                    "status": "Planned",
+                    "description": "Transfert des données vers le cloud.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Déploiement CRM Salesforce",
+        "description": "Mise en place du CRM Salesforce pour l’équipe commerciale et migration des données existantes.",
+        "start_date": "2025-08-01",
+        "end_date": "2025-09-01",
+        "status": "In Progress",
+        "id": 3,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Analyse des besoins",
+                    "start_date": "2025-08-01",
+                    "end_date": "2025-08-07",
+                    "status": "Completed",
+                    "description": "Recueil des besoins auprès des commerciaux.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Configuration Salesforce",
+                    "start_date": "2025-08-08",
+                    "end_date": "2025-08-14",
+                    "status": "In Progress",
+                    "description": "Paramétrage des objets et workflows.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Migration des données",
+                    "start_date": "2025-08-15",
+                    "end_date": "2025-08-21",
+                    "status": "Planned",
+                    "description": "Import des données clients historiques.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Formation utilisateurs",
+                    "start_date": "2025-08-22",
+                    "end_date": "2025-08-28",
+                    "status": "Planned",
+                    "description": "Sessions de formation pour l’équipe.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Portail RH",
+        "description": "Modernisation du portail RH avec gestion des congés, notes de frais et onboarding digital.",
+        "start_date": "2025-09-01",
+        "end_date": "2025-10-01",
+        "status": "Completed",
+        "id": 4,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Ateliers métiers",
+                    "start_date": "2025-09-01",
+                    "end_date": "2025-09-07",
+                    "status": "Completed",
+                    "description": "Recueil des besoins RH.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement back-end",
+                    "start_date": "2025-09-08",
+                    "end_date": "2025-09-14",
+                    "status": "Completed",
+                    "description": "API et base de données.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement front-end",
+                    "start_date": "2025-09-15",
+                    "end_date": "2025-09-21",
+                    "status": "Completed",
+                    "description": "Interface utilisateur.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Déploiement et formation",
+                    "start_date": "2025-09-22",
+                    "end_date": "2025-09-28",
+                    "status": "Completed",
+                    "description": "Mise en production et formation RH.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Application Mobile Client",
+        "description": "Développement d’une application mobile pour les clients (iOS & Android) avec espace personnel et notifications.",
+        "start_date": "2025-10-01",
+        "end_date": "2025-11-01",
+        "status": "Planning",
+        "id": 5,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Conception UI/UX",
+                    "start_date": "2025-10-01",
+                    "end_date": "2025-10-07",
+                    "status": "Completed",
+                    "description": "Maquettes et parcours utilisateur.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement iOS",
+                    "start_date": "2025-10-08",
+                    "end_date": "2025-10-14",
+                    "status": "In Progress",
+                    "description": "Développement de l’application iOS.",
+                    "id": 2
+                },
+                {
+                    "name": "Développement Android",
+                    "start_date": "2025-10-08",
+                    "end_date": "2025-10-14",
+                    "status": "In Progress",
+                    "description": "Développement de l’application Android.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Tests QA",
+                    "start_date": "2025-10-15",
+                    "end_date": "2025-10-21",
+                    "status": "Planned",
+                    "description": "Recette fonctionnelle et technique.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Déploiement stores",
+                    "start_date": "2025-10-22",
+                    "end_date": "2025-10-28",
+                    "status": "Planned",
+                    "description": "Publication sur App Store et Google Play.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Site e-Commerce",
+        "description": "Refonte complète du site e-commerce avec nouveau design, tunnel d’achat et intégration paiement Stripe.",
+        "start_date": "2025-11-01",
+        "end_date": "2025-12-01",
+        "status": "Completed",
+        "id": 6,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Wireframes",
+                    "start_date": "2025-11-01",
+                    "end_date": "2025-11-07",
+                    "status": "Completed",
+                    "description": "Maquettes fonctionnelles.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement front",
+                    "start_date": "2025-11-08",
+                    "end_date": "2025-11-14",
+                    "status": "Completed",
+                    "description": "Développement React.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Intégration paiement",
+                    "start_date": "2025-11-15",
+                    "end_date": "2025-11-21",
+                    "status": "Completed",
+                    "description": "Stripe et PayPal.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Tests utilisateurs",
+                    "start_date": "2025-11-22",
+                    "end_date": "2025-11-28",
+                    "status": "Completed",
+                    "description": "Recette et retours clients.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Déploiement Intranet Collaborateurs",
+        "description": "Mise en place d’un nouvel intranet pour faciliter la communication interne et l’accès aux ressources RH.",
+        "start_date": "2025-08-01",
+        "end_date": "2025-09-01",
+        "status": "In Progress",
+        "id": 7,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Recueil des besoins",
+                    "start_date": "2025-08-01",
+                    "end_date": "2025-08-01",
+                    "status": "Completed",
+                    "description": "Entretiens avec les équipes pour définir les fonctionnalités clés.",
+                    "id": 1
+                },
+                {
+                    "name": "Choix de la solution technique",
+                    "start_date": "2025-08-01",
+                    "end_date": "2025-08-01",
+                    "status": "In Progress",
+                    "description": "Comparatif des plateformes intranet.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Design UI/UX",
+                    "start_date": "2025-08-06",
+                    "end_date": "2025-08-10",
+                    "status": "In Progress",
+                    "description": "Création des maquettes et parcours utilisateur.",
+                    "id": 3
+                },
+                {
+                    "name": "Développement du module annuaire",
+                    "start_date": "2025-08-11",
+                    "end_date": "2025-08-13",
+                    "status": "Planned",
+                    "description": "Développement de l’annuaire des collaborateurs.",
+                    "id": 4
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement espace documentaire",
+                    "start_date": "2025-08-14",
+                    "end_date": "2025-08-18",
+                    "status": "Planned",
+                    "description": "Mise en place du partage de documents RH.",
+                    "id": 5
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette utilisateurs",
+                    "start_date": "2025-08-25",
+                    "end_date": "2025-08-28",
+                    "status": "Planned",
+                    "description": "Tests par un panel d’utilisateurs internes.",
+                    "id": 6
+                },
+                {
+                    "name": "Déploiement et communication",
+                    "start_date": "2025-08-29",
+                    "end_date": "2025-09-01",
+                    "status": "Planned",
+                    "description": "Mise en ligne et annonce officielle.",
+                    "id": 7
+                }
+            ]
+        }
+    },
+    {
+        "name": "Migration Messagerie Office 365",
+        "description": "Transfert de la messagerie d’entreprise vers Office 365 pour améliorer la sécurité et la collaboration.",
+        "start_date": "2025-09-05",
+        "end_date": "2025-10-05",
+        "status": "Planning",
+        "id": 8,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Audit des comptes existants",
+                    "start_date": "2025-09-05",
+                    "end_date": "2025-09-07",
+                    "status": "Completed",
+                    "description": "Inventaire des boîtes mail et droits d’accès.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Préparation des utilisateurs",
+                    "start_date": "2025-09-08",
+                    "end_date": "2025-09-10",
+                    "status": "In Progress",
+                    "description": "Communication et formation sur Office 365.",
+                    "id": 2
+                },
+                {
+                    "name": "Migration des boîtes mail",
+                    "start_date": "2025-09-11",
+                    "end_date": "2025-09-15",
+                    "status": "Planned",
+                    "description": "Transfert progressif des emails.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Migration des fichiers partagés",
+                    "start_date": "2025-09-16",
+                    "end_date": "2025-09-20",
+                    "status": "Planned",
+                    "description": "Transfert des documents sur OneDrive/SharePoint.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Support post-migration",
+                    "start_date": "2025-09-21",
+                    "end_date": "2025-10-05",
+                    "status": "Planned",
+                    "description": "Assistance et résolution des incidents.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Déploiement CRM HubSpot",
+        "description": "Implémentation du CRM HubSpot pour la gestion des leads et l’automatisation marketing.",
+        "start_date": "2025-10-10",
+        "end_date": "2025-11-10",
+        "status": "In Progress",
+        "id": 9,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Paramétrage des pipelines",
+                    "start_date": "2025-10-10",
+                    "end_date": "2025-10-12",
+                    "status": "Completed",
+                    "description": "Création des pipelines de vente.",
+                    "id": 1
+                },
+                {
+                    "name": "Import des contacts",
+                    "start_date": "2025-10-13",
+                    "end_date": "2025-10-14",
+                    "status": "Completed",
+                    "description": "Migration des contacts existants.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Automatisation des emails",
+                    "start_date": "2025-10-15",
+                    "end_date": "2025-10-18",
+                    "status": "In Progress",
+                    "description": "Mise en place des séquences d’emailing.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Formation des équipes commerciales",
+                    "start_date": "2025-10-19",
+                    "end_date": "2025-10-22",
+                    "status": "Planned",
+                    "description": "Sessions de formation HubSpot.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Analyse des premiers résultats",
+                    "start_date": "2025-10-23",
+                    "end_date": "2025-11-10",
+                    "status": "Planned",
+                    "description": "Suivi des KPIs et ajustements.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Application RH",
+        "description": "Refonte de l’application RH pour la gestion des congés et absences.",
+        "start_date": "2025-11-15",
+        "end_date": "2025-12-15",
+        "status": "Planning",
+        "id": 10,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Atelier besoins RH",
+                    "start_date": "2025-11-15",
+                    "end_date": "2025-11-15",
+                    "status": "Completed",
+                    "description": "Recueil des besoins auprès du service RH.",
+                    "id": 1
+                },
+                {
+                    "name": "Cartographie des processus",
+                    "start_date": "2025-11-15",
+                    "end_date": "2025-11-15",
+                    "status": "In Progress",
+                    "description": "Analyse des processus existants.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Design des écrans",
+                    "start_date": "2025-11-20",
+                    "end_date": "2025-11-24",
+                    "status": "In Progress",
+                    "description": "Maquettes des écrans de gestion des congés.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement module absences",
+                    "start_date": "2025-11-25",
+                    "end_date": "2025-12-01",
+                    "status": "Planned",
+                    "description": "Développement du module de gestion des absences.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et formation",
+                    "start_date": "2025-12-02",
+                    "end_date": "2025-12-15",
+                    "status": "Planned",
+                    "description": "Tests utilisateurs et formation RH.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Portail Fournisseurs",
+        "description": "Développement d’un portail web pour la gestion des commandes et factures fournisseurs.",
+        "start_date": "2025-12-20",
+        "end_date": "2026-01-20",
+        "status": "In Progress",
+        "id": 11,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Spécifications fonctionnelles",
+                    "start_date": "2025-12-20",
+                    "end_date": "2025-12-22",
+                    "status": "Completed",
+                    "description": "Rédaction des specs avec les achats.",
+                    "id": 1
+                },
+                {
+                    "name": "Choix de la solution technique",
+                    "start_date": "2025-12-23",
+                    "end_date": "2025-12-24",
+                    "status": "Completed",
+                    "description": "Comparatif des solutions du marché.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement back-end",
+                    "start_date": "2025-12-25",
+                    "end_date": "2025-12-29",
+                    "status": "In Progress",
+                    "description": "API Node.js pour la gestion des commandes.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement front-end",
+                    "start_date": "2025-12-30",
+                    "end_date": "2026-01-05",
+                    "status": "Planned",
+                    "description": "Interface React pour les fournisseurs.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et déploiement",
+                    "start_date": "2026-01-06",
+                    "end_date": "2026-01-20",
+                    "status": "Planned",
+                    "description": "Tests utilisateurs et mise en production.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Digital Workplace",
+        "description": "Mise en place d’un Digital Workplace pour centraliser les outils collaboratifs et la communication interne.",
+        "start_date": "2026-01-25",
+        "end_date": "2026-02-25",
+        "status": "Planning",
+        "id": 12,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Recueil des besoins",
+                    "start_date": "2026-01-25",
+                    "end_date": "2026-01-27",
+                    "status": "Completed",
+                    "description": "Entretiens avec les équipes métiers.",
+                    "id": 1
+                },
+                {
+                    "name": "Choix des outils",
+                    "start_date": "2026-01-28",
+                    "end_date": "2026-01-29",
+                    "status": "Completed",
+                    "description": "Sélection des outils collaboratifs.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement portail collaboratif",
+                    "start_date": "2026-01-30",
+                    "end_date": "2026-02-05",
+                    "status": "In Progress",
+                    "description": "Développement du portail Digital Workplace.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Intégration SSO",
+                    "start_date": "2026-02-06",
+                    "end_date": "2026-02-10",
+                    "status": "Planned",
+                    "description": "Connexion avec l’annuaire d’entreprise.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette utilisateurs et déploiement",
+                    "start_date": "2026-02-11",
+                    "end_date": "2026-02-25",
+                    "status": "Planned",
+                    "description": "Tests par un panel d’utilisateurs et mise en ligne.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Outil de Reporting Financier",
+        "description": "Développement d’un outil de reporting automatisé pour le service financier.",
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "status": "In Progress",
+        "id": 13,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Recueil besoins DAF",
+                    "start_date": "2026-03-01",
+                    "end_date": "2026-03-03",
+                    "status": "Completed",
+                    "description": "Entretiens avec la direction financière.",
+                    "id": 1
+                },
+                {
+                    "name": "Spécifications fonctionnelles",
+                    "start_date": "2026-03-04",
+                    "end_date": "2026-03-05",
+                    "status": "Completed",
+                    "description": "Rédaction des besoins.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement scripts d’export",
+                    "start_date": "2026-03-06",
+                    "end_date": "2026-03-10",
+                    "status": "In Progress",
+                    "description": "Automatisation des exports mensuels.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Mise en production",
+                    "start_date": "2026-03-11",
+                    "end_date": "2026-03-20",
+                    "status": "Planned",
+                    "description": "Déploiement de l’outil.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Formation utilisateurs",
+                    "start_date": "2026-03-21",
+                    "end_date": "2026-04-01",
+                    "status": "Planned",
+                    "description": "Sessions de formation pour la DAF.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Identité Visuelle",
+        "description": "Refonte du logo, de la charte graphique et des supports de communication.",
+        "start_date": "2026-04-05",
+        "end_date": "2026-05-05",
+        "status": "Planning",
+        "id": 14,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Atelier logo",
+                    "start_date": "2026-04-05",
+                    "end_date": "2026-04-07",
+                    "status": "Completed",
+                    "description": "Création du nouveau logo.",
+                    "id": 1
+                },
+                {
+                    "name": "Déclinaison supports",
+                    "start_date": "2026-04-08",
+                    "end_date": "2026-04-10",
+                    "status": "Completed",
+                    "description": "Cartes de visite, templates PPT.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Charte graphique",
+                    "start_date": "2026-04-11",
+                    "end_date": "2026-04-15",
+                    "status": "In Progress",
+                    "description": "Définition de la charte graphique.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Communication interne",
+                    "start_date": "2026-04-16",
+                    "end_date": "2026-04-20",
+                    "status": "Planned",
+                    "description": "Annonce de la nouvelle identité.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Déploiement supports",
+                    "start_date": "2026-04-21",
+                    "end_date": "2026-05-05",
+                    "status": "Planned",
+                    "description": "Mise à jour de tous les supports.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Outil de Gestion des Tickets IT",
+        "description": "Développement d’un outil de gestion des tickets pour le support informatique.",
+        "start_date": "2026-05-10",
+        "end_date": "2026-06-10",
+        "status": "In Progress",
+        "id": 15,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Spécifications support",
+                    "start_date": "2026-05-10",
+                    "end_date": "2026-05-12",
+                    "status": "Completed",
+                    "description": "Rédaction du cahier des charges.",
+                    "id": 1
+                },
+                {
+                    "name": "Choix de la solution",
+                    "start_date": "2026-05-13",
+                    "end_date": "2026-05-14",
+                    "status": "Completed",
+                    "description": "Comparatif des outils de ticketing.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement module tickets",
+                    "start_date": "2026-05-15",
+                    "end_date": "2026-05-20",
+                    "status": "In Progress",
+                    "description": "Développement du module principal.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Intégration SSO",
+                    "start_date": "2026-05-21",
+                    "end_date": "2026-05-25",
+                    "status": "Planned",
+                    "description": "Connexion avec l’annuaire d’entreprise.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et formation support",
+                    "start_date": "2026-05-26",
+                    "end_date": "2026-06-10",
+                    "status": "Planned",
+                    "description": "Tests et formation de l’équipe support.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Portail Client B2B",
+        "description": "Création d’un portail dédié aux clients professionnels pour le suivi des commandes et factures.",
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "status": "Planning",
+        "id": 16,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Atelier besoins clients",
+                    "start_date": "2026-06-01",
+                    "end_date": "2026-06-03",
+                    "status": "Completed",
+                    "description": "Entretiens avec des clients B2B pilotes.",
+                    "id": 1
+                },
+                {
+                    "name": "Spécifications fonctionnelles",
+                    "start_date": "2026-06-04",
+                    "end_date": "2026-06-05",
+                    "status": "Completed",
+                    "description": "Rédaction du cahier des charges.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Design UI/UX",
+                    "start_date": "2026-06-06",
+                    "end_date": "2026-06-10",
+                    "status": "In Progress",
+                    "description": "Maquettes du portail client.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement back-end",
+                    "start_date": "2026-06-11",
+                    "end_date": "2026-06-17",
+                    "status": "Planned",
+                    "description": "API pour la gestion des commandes.",
+                    "id": 4
+                },
+                {
+                    "name": "Développement front-end",
+                    "start_date": "2026-06-18",
+                    "end_date": "2026-06-24",
+                    "status": "Planned",
+                    "description": "Interface React pour les clients.",
+                    "id": 5
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et déploiement",
+                    "start_date": "2026-06-25",
+                    "end_date": "2026-07-01",
+                    "status": "Planned",
+                    "description": "Tests utilisateurs et mise en production.",
+                    "id": 6
+                }
+            ]
+        }
+    },
+    {
+        "name": "Campagne Marketing Printemps",
+        "description": "Lancement d’une campagne marketing multicanal pour le printemps.",
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "status": "In Progress",
+        "id": 17,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Définition des cibles",
+                    "start_date": "2026-03-01",
+                    "end_date": "2026-03-02",
+                    "status": "Completed",
+                    "description": "Segmentation des clients.",
+                    "id": 1
+                },
+                {
+                    "name": "Création des visuels",
+                    "start_date": "2026-03-03",
+                    "end_date": "2026-03-05",
+                    "status": "Completed",
+                    "description": "Conception graphique pour print et digital.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Rédaction des messages",
+                    "start_date": "2026-03-06",
+                    "end_date": "2026-03-08",
+                    "status": "In Progress",
+                    "description": "Copywriting pour emailings et réseaux sociaux.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Diffusion multicanal",
+                    "start_date": "2026-03-09",
+                    "end_date": "2026-03-20",
+                    "status": "Planned",
+                    "description": "Envoi des campagnes et publications.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Analyse des retombées",
+                    "start_date": "2026-03-21",
+                    "end_date": "2026-04-01",
+                    "status": "Planned",
+                    "description": "Suivi des KPIs et reporting.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Mise en conformité RGPD",
+        "description": "Projet de mise en conformité RGPD pour l’ensemble des systèmes d’information.",
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "status": "Completed",
+        "id": 18,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Cartographie des données",
+                    "start_date": "2026-02-01",
+                    "end_date": "2026-02-05",
+                    "status": "Completed",
+                    "description": "Identification des traitements de données.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Mise à jour des politiques",
+                    "start_date": "2026-02-06",
+                    "end_date": "2026-02-10",
+                    "status": "Completed",
+                    "description": "Rédaction des mentions légales et consentements.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Sensibilisation équipes",
+                    "start_date": "2026-02-11",
+                    "end_date": "2026-02-15",
+                    "status": "Completed",
+                    "description": "Ateliers de formation RGPD.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Audit final et corrections",
+                    "start_date": "2026-02-16",
+                    "end_date": "2026-03-01",
+                    "status": "Completed",
+                    "description": "Vérification de la conformité et corrections.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Déploiement Application Mobile Interne",
+        "description": "Développement et lancement d’une application mobile pour les collaborateurs internes.",
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-01",
+        "status": "In Progress",
+        "id": 19,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Atelier besoins utilisateurs",
+                    "start_date": "2026-05-01",
+                    "end_date": "2026-05-03",
+                    "status": "Completed",
+                    "description": "Recueil des besoins auprès des équipes internes.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Design UI/UX",
+                    "start_date": "2026-05-04",
+                    "end_date": "2026-05-10",
+                    "status": "In Progress",
+                    "description": "Maquettes de l’application mobile.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement iOS & Android",
+                    "start_date": "2026-05-11",
+                    "end_date": "2026-05-25",
+                    "status": "Planned",
+                    "description": "Développement natif des deux plateformes.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et déploiement",
+                    "start_date": "2026-05-26",
+                    "end_date": "2026-06-01",
+                    "status": "Planned",
+                    "description": "Tests utilisateurs et publication sur stores internes.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Site Institutionnel",
+        "description": "Refonte du site institutionnel avec nouveau CMS et espace presse.",
+        "start_date": "2026-07-01",
+        "end_date": "2026-08-01",
+        "status": "Planning",
+        "id": 20,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Choix CMS",
+                    "start_date": "2026-07-01",
+                    "end_date": "2026-07-03",
+                    "status": "Completed",
+                    "description": "Étude des solutions CMS.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement back-end",
+                    "start_date": "2026-07-04",
+                    "end_date": "2026-07-10",
+                    "status": "In Progress",
+                    "description": "Développement de l’API et base de données.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement front-end",
+                    "start_date": "2026-07-11",
+                    "end_date": "2026-07-20",
+                    "status": "Planned",
+                    "description": "Développement de l’interface utilisateur.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et communication",
+                    "start_date": "2026-07-21",
+                    "end_date": "2026-08-01",
+                    "status": "Planned",
+                    "description": "Tests, corrections et communication presse.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Outil de Gestion des Stocks",
+        "description": "Développement d’un outil de gestion des stocks avec alertes et reporting.",
+        "start_date": "2026-08-10",
+        "end_date": "2026-09-10",
+        "status": "In Progress",
+        "id": 21,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Analyse besoins logistique",
+                    "start_date": "2026-08-10",
+                    "end_date": "2026-08-12",
+                    "status": "Completed",
+                    "description": "Entretiens avec la logistique.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement module gestion",
+                    "start_date": "2026-08-13",
+                    "end_date": "2026-08-20",
+                    "status": "In Progress",
+                    "description": "Développement du module de gestion des stocks.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement alertes",
+                    "start_date": "2026-08-21",
+                    "end_date": "2026-08-25",
+                    "status": "Planned",
+                    "description": "Mise en place des alertes de seuil.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et formation",
+                    "start_date": "2026-08-26",
+                    "end_date": "2026-09-10",
+                    "status": "Planned",
+                    "description": "Tests utilisateurs et formation logistique.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Digitalisation Processus Achat",
+        "description": "Automatisation et digitalisation du processus d’achat (workflow, validation, archivage).",
+        "start_date": "2026-09-15",
+        "end_date": "2026-10-15",
+        "status": "Planning",
+        "id": 22,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Cartographie processus",
+                    "start_date": "2026-09-15",
+                    "end_date": "2026-09-17",
+                    "status": "Completed",
+                    "description": "Analyse des étapes actuelles.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement workflow",
+                    "start_date": "2026-09-18",
+                    "end_date": "2026-09-25",
+                    "status": "In Progress",
+                    "description": "Automatisation des validations.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Déploiement et archivage",
+                    "start_date": "2026-09-26",
+                    "end_date": "2026-10-05",
+                    "status": "Planned",
+                    "description": "Mise en production et archivage numérique.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Formation utilisateurs",
+                    "start_date": "2026-10-06",
+                    "end_date": "2026-10-15",
+                    "status": "Planned",
+                    "description": "Sessions de formation pour les acheteurs.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Application Métier",
+        "description": "Refonte d’une application métier critique pour améliorer la performance et l’ergonomie.",
+        "start_date": "2026-11-01",
+        "end_date": "2026-12-01",
+        "status": "In Progress",
+        "id": 23,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Audit technique",
+                    "start_date": "2026-11-01",
+                    "end_date": "2026-11-03",
+                    "status": "Completed",
+                    "description": "Analyse de l’existant.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement back-end",
+                    "start_date": "2026-11-04",
+                    "end_date": "2026-11-10",
+                    "status": "In Progress",
+                    "description": "Refonte du code serveur.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement front-end",
+                    "start_date": "2026-11-11",
+                    "end_date": "2026-11-20",
+                    "status": "Planned",
+                    "description": "Refonte de l’interface utilisateur.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Tests utilisateurs et déploiement",
+                    "start_date": "2026-11-21",
+                    "end_date": "2026-12-01",
+                    "status": "Planned",
+                    "description": "Recette métier et mise en production.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Portail Recrutement",
+        "description": "Développement d’un portail de recrutement avec gestion des candidatures et entretiens.",
+        "start_date": "2026-12-10",
+        "end_date": "2027-01-10",
+        "status": "Planning",
+        "id": 24,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Spécifications RH",
+                    "start_date": "2026-12-10",
+                    "end_date": "2026-12-12",
+                    "status": "Completed",
+                    "description": "Rédaction du cahier des charges avec la RH.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement module candidatures",
+                    "start_date": "2026-12-13",
+                    "end_date": "2026-12-20",
+                    "status": "In Progress",
+                    "description": "Développement du module de gestion des candidatures.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement module entretiens",
+                    "start_date": "2026-12-21",
+                    "end_date": "2026-12-31",
+                    "status": "Planned",
+                    "description": "Gestion des entretiens et notifications.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et formation RH",
+                    "start_date": "2027-01-01",
+                    "end_date": "2027-01-10",
+                    "status": "Planned",
+                    "description": "Tests et formation de l’équipe RH.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Optimisation Parc Informatique",
+        "description": "Modernisation du parc informatique avec renouvellement des postes et migration vers Windows 11.",
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "status": "Planning",
+        "id": 25,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Inventaire matériel existant",
+                    "start_date": "2026-06-01",
+                    "end_date": "2026-06-03",
+                    "status": "Completed",
+                    "description": "Recensement des postes à renouveler.",
+                    "id": 1
+                },
+                {
+                    "name": "Consultation fournisseurs",
+                    "start_date": "2026-06-04",
+                    "end_date": "2026-06-05",
+                    "status": "Completed",
+                    "description": "Appel d’offres pour le matériel.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Commande et réception",
+                    "start_date": "2026-06-06",
+                    "end_date": "2026-06-10",
+                    "status": "In Progress",
+                    "description": "Commande et livraison des nouveaux équipements.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Déploiement Windows 11",
+                    "start_date": "2026-06-11",
+                    "end_date": "2026-06-20",
+                    "status": "Planned",
+                    "description": "Installation et configuration des postes.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Formation utilisateurs",
+                    "start_date": "2026-06-21",
+                    "end_date": "2026-07-01",
+                    "status": "Planned",
+                    "description": "Sessions de formation à Windows 11.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Campagne Marketing Réseaux Sociaux",
+        "description": "Lancement d’une campagne de notoriété sur LinkedIn, Facebook et Instagram.",
+        "start_date": "2026-07-05",
+        "end_date": "2026-08-05",
+        "status": "In Progress",
+        "id": 26,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Définition des cibles",
+                    "start_date": "2026-07-05",
+                    "end_date": "2026-07-07",
+                    "status": "Completed",
+                    "description": "Segmentation des audiences.",
+                    "id": 1
+                },
+                {
+                    "name": "Création des visuels",
+                    "start_date": "2026-07-08",
+                    "end_date": "2026-07-10",
+                    "status": "Completed",
+                    "description": "Création des images et vidéos.",
+                    "id": 2
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Programmation des posts",
+                    "start_date": "2026-07-11",
+                    "end_date": "2026-07-15",
+                    "status": "In Progress",
+                    "description": "Planification des publications.",
+                    "id": 3
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Lancement campagne",
+                    "start_date": "2026-07-16",
+                    "end_date": "2026-07-22",
+                    "status": "Planned",
+                    "description": "Diffusion sur les réseaux sociaux.",
+                    "id": 4
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Analyse des retombées",
+                    "start_date": "2026-07-23",
+                    "end_date": "2026-08-05",
+                    "status": "Planned",
+                    "description": "Reporting et ajustements.",
+                    "id": 5
+                }
+            ]
+        }
+    },
+    {
+        "name": "Automatisation Facturation Clients",
+        "description": "Mise en place d’un module d’automatisation de la facturation pour le service comptable.",
+        "start_date": "2026-08-10",
+        "end_date": "2026-09-10",
+        "status": "Planning",
+        "id": 27,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Analyse des besoins comptables",
+                    "start_date": "2026-08-10",
+                    "end_date": "2026-08-12",
+                    "status": "Completed",
+                    "description": "Entretiens avec la comptabilité.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Développement du module",
+                    "start_date": "2026-08-13",
+                    "end_date": "2026-08-20",
+                    "status": "In Progress",
+                    "description": "Développement de l’automatisation.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Tests et recette",
+                    "start_date": "2026-08-21",
+                    "end_date": "2026-08-31",
+                    "status": "Planned",
+                    "description": "Tests fonctionnels avec la comptabilité.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Déploiement et formation",
+                    "start_date": "2026-09-01",
+                    "end_date": "2026-09-10",
+                    "status": "Planned",
+                    "description": "Mise en production et formation utilisateurs.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Refonte Espace Client Web",
+        "description": "Refonte de l’espace client web pour améliorer l’expérience utilisateur et ajouter de nouvelles fonctionnalités.",
+        "start_date": "2026-09-15",
+        "end_date": "2026-10-15",
+        "status": "In Progress",
+        "id": 28,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Atelier UX clients",
+                    "start_date": "2026-09-15",
+                    "end_date": "2026-09-17",
+                    "status": "Completed",
+                    "description": "Recueil des attentes clients.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Design des nouvelles pages",
+                    "start_date": "2026-09-18",
+                    "end_date": "2026-09-22",
+                    "status": "In Progress",
+                    "description": "Maquettes et prototypes.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Développement front-end",
+                    "start_date": "2026-09-23",
+                    "end_date": "2026-09-30",
+                    "status": "Planned",
+                    "description": "Développement React.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Recette et mise en production",
+                    "start_date": "2026-10-01",
+                    "end_date": "2026-10-15",
+                    "status": "Planned",
+                    "description": "Tests utilisateurs et déploiement.",
+                    "id": 4
+                }
+            ]
+        }
+    },
+    {
+        "name": "Déploiement Solution GED",
+        "description": "Mise en place d’une solution de Gestion Electronique de Documents pour l’ensemble des services.",
+        "start_date": "2026-10-20",
+        "end_date": "2026-11-20",
+        "status": "Planning",
+        "id": 29,
+        "tasks": {
+            "Semaine 1": [
+                {
+                    "name": "Recueil des besoins métiers",
+                    "start_date": "2026-10-20",
+                    "end_date": "2026-10-22",
+                    "status": "Completed",
+                    "description": "Entretiens avec les services.",
+                    "id": 1
+                }
+            ],
+            "Semaine 2": [
+                {
+                    "name": "Choix de la solution GED",
+                    "start_date": "2026-10-23",
+                    "end_date": "2026-10-27",
+                    "status": "In Progress",
+                    "description": "Comparatif des solutions du marché.",
+                    "id": 2
+                }
+            ],
+            "Semaine 3": [
+                {
+                    "name": "Déploiement pilote",
+                    "start_date": "2026-10-28",
+                    "end_date": "2026-11-10",
+                    "status": "Planned",
+                    "description": "Déploiement sur un périmètre restreint.",
+                    "id": 3
+                }
+            ],
+            "Semaine 4": [
+                {
+                    "name": "Généralisation et formation",
+                    "start_date": "2026-11-11",
+                    "end_date": "2026-11-20",
+                    "status": "Planned",
+                    "description": "Déploiement global et formation utilisateurs.",
+                    "id": 4
+                }
+            ]
+        }
+    }
+]
