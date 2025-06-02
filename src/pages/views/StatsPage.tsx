@@ -1,19 +1,18 @@
 import { AppSidebar } from "@/components/app-sidebar"
 import { Card } from "@/components/ui/card"
 import { StatsCards } from "@/components/stats-cards"
-import { TrendingUp } from "lucide-react"
 import {
     Bar,
     BarChart,
     CartesianGrid,
-    Label,
-    Pie,
+    XAxis,
     PieChart,
-    Radar,
+    Pie,
+    Label,
     RadarChart,
+    Radar,
     PolarAngleAxis,
     PolarGrid,
-    XAxis,
 } from "recharts"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import {
@@ -31,14 +30,30 @@ import {
 } from "@/components/ui/chart"
 import { SiteHeader } from "@/components/site-header"
 import { useTheme } from "@/hooks/use-theme"
-import { useMemo } from "react"
-import data from "./data.json"
+import { useEffect, useState, useMemo } from "react"
+import { fetchProjects, supabase } from "@/lib/supabaseClient"
 
 export default function Page() {
     const { theme } = useTheme()
+    const [projects, setProjects] = useState<any[]>([])
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        fetchProjects().then(async projs => {
+            // Pour chaque projet, charger ses tâches (pour stats)
+            const projectsWithTasks = await Promise.all(
+                projs.map(async p => {
+                    const { data: tasks } = await supabase
+                        .from("tasks")
+                        .select("*")
+                        .eq("project_id", p.id)
+                    return { ...p, tasks: tasks || [] }
+                })
+            )
+            setProjects(projectsWithTasks)
+            setLoading(false)
+        })
+    }, [])
 
-    // Extraction des données réelles depuis data.json
-    const projects = useMemo(() => data, [])
     // Statistiques globales dynamiques
     const totalTasks = useMemo(
         () =>
@@ -55,7 +70,7 @@ export default function Page() {
                     acc +
                     Object.values(p.tasks || {})
                         .flat()
-                        .filter(t => t.status === "Completed").length,
+                        .filter((t: any) => t.status === "Completed").length,
                 0
             ),
         [projects]
@@ -67,7 +82,7 @@ export default function Page() {
                     acc +
                     Object.values(p.tasks || {})
                         .flat()
-                        .filter(t => t.status === "In Progress").length,
+                        .filter((t: any) => t.status === "In Progress").length,
                 0
             ),
         [projects]
@@ -79,7 +94,7 @@ export default function Page() {
                     acc +
                     Object.values(p.tasks || {})
                         .flat()
-                        .filter(t => t.status === "Planned").length,
+                        .filter((t: any) => t.status === "Planned").length,
                 0
             ),
         [projects]
@@ -91,7 +106,7 @@ export default function Page() {
                     acc +
                     Object.values(p.tasks || {})
                         .flat()
-                        .filter(t => {
+                        .filter((t: any) => {
                             if (t.status === "Completed") return false
                             const end = new Date(t.end_date)
                             return end < new Date() // tâche en retard
@@ -123,7 +138,7 @@ export default function Page() {
         projects.forEach(p => {
             Object.values(p.tasks || {})
                 .flat()
-                .forEach(t => {
+                .forEach((t: any) => {
                     const d = new Date(t.end_date)
                     if (d.getMonth() === i) {
                         if (t.status === "Completed") terminees++
@@ -185,7 +200,7 @@ export default function Page() {
         projects.forEach(p => {
             const hasTask = Object.values(p.tasks || {})
                 .flat()
-                .some(t => new Date(t.end_date).getMonth() === i)
+                .some((t: any) => new Date(t.end_date).getMonth() === i)
             if (hasTask) actifs++
         })
         return { month, actifs }
@@ -207,9 +222,11 @@ export default function Page() {
         const tasks = Object.values(p.tasks || {}).flat()
         return {
             projet: p.name,
-            terminees: tasks.filter(t => t.status === "Completed").length,
-            enCours: tasks.filter(t => t.status === "In Progress").length,
-            aFaire: tasks.filter(t => t.status === "Planned").length,
+            terminees: tasks.filter((t: any) => t.status === "Completed")
+                .length,
+            enCours: tasks.filter((t: any) => t.status === "In Progress")
+                .length,
+            aFaire: tasks.filter((t: any) => t.status === "Planned").length,
         }
     })
 
@@ -219,7 +236,7 @@ export default function Page() {
         projects.forEach(p => {
             Object.values(p.tasks || {})
                 .flat()
-                .forEach(t => {
+                .forEach((t: any) => {
                     const d = new Date(t.end_date)
                     if (d.getMonth() === i && t.status === "Completed")
                         terminees++
@@ -232,7 +249,7 @@ export default function Page() {
     projects.forEach(p => {
         Object.values(p.tasks || {})
             .flat()
-            .forEach(t => {
+            .forEach((t: any) => {
                 // Utilise t.type si présent, sinon fallback sur t.status ou "Autre"
                 const type = (t as any).type || t.status || "Autre"
                 typeMap.set(type, (typeMap.get(type) || 0) + 1)
@@ -259,6 +276,15 @@ export default function Page() {
     const chartConfigDonut = Object.fromEntries(
         chartDataDonut.map(d => [d.type, { label: d.type, color: "#3b82f6" }])
     ) satisfies ChartConfig
+
+    // Affichage d'un indicateur de chargement si loading
+    if (loading) {
+        return (
+            <div className="p-8 text-center text-muted-foreground">
+                Chargement des statistiques...
+            </div>
+        )
+    }
 
     return (
         <SidebarProvider

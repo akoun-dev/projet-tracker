@@ -15,51 +15,111 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { TasksTable } from "@/components/tasks-table"
-import projectsData from "./data.json"
 import {
     IconDownload,
     IconHistory,
     IconListCheck,
     IconSearch,
 } from "@tabler/icons-react"
-import { useNavigate } from "react-router-dom"
 import { Input } from "@/components/ui/input"
 import { StatsCards } from "@/components/stats-cards"
+import {
+    Dialog,
+    DialogTrigger,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogDescription,
+    DialogFooter,
+    DialogClose,
+} from "@/components/ui/dialog"
+import { createTask, fetchProjects, supabase } from "@/lib/supabaseClient"
+
+type TaskStatus = "Planned" | "In Progress" | "Completed"
 
 export default function Page() {
     const { theme } = useTheme()
-    // Regroupement de toutes les tâches de tous les projets
     const [search, setSearch] = React.useState("")
-    const allTasks = projectsData.flatMap(project =>
-        Object.values(project.tasks)
-            .flat()
-            .map(task => ({
-                ...task,
-                projectName: project.name,
-                projectId: project.id,
-                projectStatus: project.status,
-                projectStart: project.start_date,
-                projectEnd: project.end_date,
-            }))
-    )
-    
-    // Calcul des statistiques des tâches
-    const totalTasks = allTasks.length
-    const completedTasks = allTasks.filter(t => t.status === "Completed").length
-    const inProgressTasks = allTasks.filter(t => t.status === "In Progress").length
-    const plannedTasks = allTasks.filter(t => t.status === "Planned").length
-    const overdueTasks = allTasks.filter(t => {
+    const [openDialog, setOpenDialog] = React.useState(false)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState<string | null>(null)
+    const [success, setSuccess] = React.useState<string | null>(null)
+    const [tasks, setTasks] = React.useState<any[]>([])
+    const [projects, setProjects] = React.useState<any[]>([])
+    const [fetching, setFetching] = React.useState(false)
+    const [newTask, setNewTask] = React.useState({
+        name: "",
+        description: "",
+        start_date: "",
+        end_date: "",
+        status: "Planned" as TaskStatus,
+        projectId: 1, // valeur par défaut pour éviter undefined
+        week: "",
+    })
+
+    // Fetch projets et tâches depuis Supabase
+    const fetchAll = async () => {
+        setFetching(true)
+        setError(null)
+        try {
+            const { data: tasksData, error: tasksError } = await supabase
+                .from("tasks")
+                .select("*, projects:id (name, status, start_date, end_date)")
+                .order("start_date", { ascending: true })
+            if (tasksError) throw tasksError
+            // Correction du mapping des tâches Supabase : cast explicite en 'Record<string, any>' pour le spread
+            setTasks(
+                Array.isArray(tasksData)
+                    ? tasksData.map((task: unknown) => {
+                          if (typeof task === "object" && task !== null) {
+                              const t = task as Record<string, any>
+                              return {
+                                  ...t,
+                                  projectName: t.projects?.name,
+                                  projectStatus: t.projects?.status,
+                                  projectStart: t.projects?.start_date,
+                                  projectEnd: t.projects?.end_date,
+                              }
+                          }
+                          return {}
+                      })
+                    : []
+            )
+            const projs = await fetchProjects()
+            setProjects(projs)
+            // Préselection projet par défaut
+            if (projs.length && newTask.projectId === undefined) {
+                setNewTask(t => ({ ...t, projectId: projs[0].id }))
+            }
+        } catch (err: any) {
+            setError("Erreur chargement données: " + err.message)
+        } finally {
+            setFetching(false)
+        }
+    }
+
+    React.useEffect(() => {
+        fetchAll()
+        // eslint-disable-next-line
+    }, [])
+
+    // Statistiques dynamiques
+    const totalTasks = tasks.length
+    const completedTasks = tasks.filter(t => t.status === "Completed").length
+    const inProgressTasks = tasks.filter(t => t.status === "In Progress").length
+    const plannedTasks = tasks.filter(t => t.status === "Planned").length
+    const overdueTasks = tasks.filter(t => {
         if (t.status === "Completed") return false
         const end = new Date(t.end_date)
         return end < new Date()
     }).length
 
-    // Filtrage des tâches (nom, projet, description)
-    const filteredTasks = allTasks.filter(task => {
+    // Filtrage dynamique
+    const filteredTasks = tasks.filter(task => {
         const q = search.trim().toLowerCase()
         if (!q) return true
         return (
-            task.name.toLowerCase().includes(q) ||
+            task.name?.toLowerCase().includes(q) ||
             (task.projectName && task.projectName.toLowerCase().includes(q)) ||
             (task.description && task.description.toLowerCase().includes(q))
         )
@@ -87,6 +147,214 @@ export default function Page() {
                                 Toutes les tâches
                             </h1>
                             <div className="flex gap-2">
+                                <Dialog
+                                    open={openDialog}
+                                    onOpenChange={setOpenDialog}
+                                >
+                                    <DialogTrigger asChild>
+                                        <Button variant="default" size="sm">
+                                            + Nouvelle tâche
+                                        </Button>
+                                    </DialogTrigger>
+                                    <DialogContent>
+                                        <DialogHeader>
+                                            <DialogTitle>
+                                                Nouvelle tâche
+                                            </DialogTitle>
+                                            <DialogDescription>
+                                                Créer une nouvelle tâche
+                                                (données non persistées)
+                                            </DialogDescription>
+                                        </DialogHeader>
+                                        <form
+                                            className="flex flex-col gap-3"
+                                            onSubmit={async e => {
+                                                e.preventDefault()
+                                                setLoading(true)
+                                                setError(null)
+                                                setSuccess(null)
+                                                try {
+                                                    const created =
+                                                        await createTask({
+                                                            name: newTask.name,
+                                                            description:
+                                                                newTask.description,
+                                                            start_date:
+                                                                newTask.start_date,
+                                                            end_date:
+                                                                newTask.end_date,
+                                                            status: newTask.status,
+                                                            project_id:
+                                                                newTask.projectId,
+                                                            week: newTask.week,
+                                                        })
+                                                    if (created) {
+                                                        setSuccess(
+                                                            "Tâche créée avec succès !"
+                                                        )
+                                                        setOpenDialog(false)
+                                                        setNewTask({
+                                                            name: "",
+                                                            description: "",
+                                                            start_date: "",
+                                                            end_date: "",
+                                                            status: "Planned",
+                                                            projectId:
+                                                                projects[0]?.id,
+                                                            week: "",
+                                                        })
+                                                        await fetchAll()
+                                                    } else {
+                                                        setError(
+                                                            "Erreur lors de la création de la tâche."
+                                                        )
+                                                    }
+                                                } catch (err) {
+                                                    setError(
+                                                        "Erreur inattendue : " +
+                                                            (err as any)
+                                                                ?.message
+                                                    )
+                                                } finally {
+                                                    setLoading(false)
+                                                }
+                                            }}
+                                        >
+                                            <input
+                                                className="border rounded px-2 py-1"
+                                                placeholder="Nom de la tâche"
+                                                required
+                                                value={newTask.name}
+                                                onChange={e =>
+                                                    setNewTask(t => ({
+                                                        ...t,
+                                                        name: e.target.value,
+                                                    }))
+                                                }
+                                            />
+                                            <textarea
+                                                className="border rounded px-2 py-1"
+                                                placeholder="Description"
+                                                value={newTask.description}
+                                                onChange={e =>
+                                                    setNewTask(t => ({
+                                                        ...t,
+                                                        description:
+                                                            e.target.value,
+                                                    }))
+                                                }
+                                            />
+                                            <div className="flex gap-2">
+                                                <input
+                                                    className="border rounded px-2 py-1 flex-1"
+                                                    type="date"
+                                                    required
+                                                    value={newTask.start_date}
+                                                    onChange={e =>
+                                                        setNewTask(t => ({
+                                                            ...t,
+                                                            start_date:
+                                                                e.target.value,
+                                                        }))
+                                                    }
+                                                />
+                                                <input
+                                                    className="border rounded px-2 py-1 flex-1"
+                                                    type="date"
+                                                    required
+                                                    value={newTask.end_date}
+                                                    onChange={e =>
+                                                        setNewTask(t => ({
+                                                            ...t,
+                                                            end_date:
+                                                                e.target.value,
+                                                        }))
+                                                    }
+                                                />
+                                            </div>
+                                            <select
+                                                className="border rounded px-2 py-1"
+                                                value={newTask.status}
+                                                onChange={e =>
+                                                    setNewTask(t => ({
+                                                        ...t,
+                                                        status: e.target.value,
+                                                    }))
+                                                }
+                                            >
+                                                <option value="Planned">
+                                                    À faire
+                                                </option>
+                                                <option value="In Progress">
+                                                    En cours
+                                                </option>
+                                                <option value="Completed">
+                                                    Terminé
+                                                </option>
+                                            </select>
+                                            <select
+                                                className="border rounded px-2 py-1"
+                                                value={newTask.projectId}
+                                                onChange={e =>
+                                                    setNewTask(t => ({
+                                                        ...t,
+                                                        projectId: Number(
+                                                            e.target.value
+                                                        ),
+                                                    }))
+                                                }
+                                            >
+                                                {projects.map(p => (
+                                                    <option
+                                                        key={p.id}
+                                                        value={p.id}
+                                                    >
+                                                        {p.name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <input
+                                                className="border rounded px-2 py-1"
+                                                placeholder="Semaine (ex: Semaine 1)"
+                                                value={newTask.week}
+                                                onChange={e =>
+                                                    setNewTask(t => ({
+                                                        ...t,
+                                                        week: e.target.value,
+                                                    }))
+                                                }
+                                            />
+                                            {error && (
+                                                <div className="text-red-600 text-xs">
+                                                    {error}
+                                                </div>
+                                            )}
+                                            {success && (
+                                                <div className="text-green-600 text-xs">
+                                                    {success}
+                                                </div>
+                                            )}
+                                            <DialogFooter>
+                                                <DialogClose asChild>
+                                                    <Button
+                                                        type="button"
+                                                        variant="outline"
+                                                    >
+                                                        Annuler
+                                                    </Button>
+                                                </DialogClose>
+                                                <Button
+                                                    type="submit"
+                                                    disabled={loading}
+                                                >
+                                                    {loading
+                                                        ? "Création..."
+                                                        : "Créer"}
+                                                </Button>
+                                            </DialogFooter>
+                                        </form>
+                                    </DialogContent>
+                                </Dialog>
                                 <Button variant="outline" size="sm">
                                     <IconDownload className="w-4 h-4 mr-1" />{" "}
                                     Exporter
@@ -97,12 +365,12 @@ export default function Page() {
                                 </Button>
                             </div>
                         </div>
-                        <StatsCards 
-                          totalTasks={totalTasks}
-                          completedTasks={completedTasks}
-                          inProgressTasks={inProgressTasks}
-                          plannedTasks={plannedTasks}
-                          overdueTasks={overdueTasks}
+                        <StatsCards
+                            totalTasks={totalTasks}
+                            completedTasks={completedTasks}
+                            inProgressTasks={inProgressTasks}
+                            plannedTasks={plannedTasks}
+                            overdueTasks={overdueTasks}
                         />
                         {/* Zone de recherche tâches */}
                         <div className="flex items-center gap-2 mb-4">
@@ -163,7 +431,7 @@ export default function Page() {
                                         </CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        {projectsData.map(project => {
+                                        {projects.map(project => {
                                             const projectTasks = Object.values(
                                                 project.tasks
                                             )
@@ -266,6 +534,11 @@ export default function Page() {
                                 </Card>
                             </TabsContent>
                         </Tabs>
+                        {fetching && (
+                            <div className="text-sm text-muted-foreground">
+                                Chargement des tâches...
+                            </div>
+                        )}
                     </div>
                 </div>
             </SidebarInset>
